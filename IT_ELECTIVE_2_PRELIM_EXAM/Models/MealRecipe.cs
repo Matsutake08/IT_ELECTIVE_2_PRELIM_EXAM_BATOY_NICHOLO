@@ -8,7 +8,8 @@ public class MealRecipe : RecipeBase, IRecipeSearchable
     public string Category { get; set; }
     public string Area { get; set; }
 
-    public MealRecipe(string title, int prepTime, string area) : base(title, prepTime, "Meal Description")
+    public MealRecipe(string title, int prepTime, string area)
+        : base(title, prepTime, "Meal Description", 0)
     {
         Category = "Pasta";
         Area = area;
@@ -16,7 +17,7 @@ public class MealRecipe : RecipeBase, IRecipeSearchable
 
     public string SearchCriteria => Title;
 
-    public override string GetRecipeInfo() => $"Title: {Title}, Category: {Category}";
+    public override string GetRecipeInfo() => $"Title: {Title} | Category: {Category} | Area: {Area}";
 
     public bool MatchesSearch(string searchTerm)
     {
