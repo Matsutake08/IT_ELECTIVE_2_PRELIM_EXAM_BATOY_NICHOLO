@@ -2,8 +2,8 @@ namespace IT_ELECTIVE_2_PRELIM_EXAM.Models;
 
 public class Ingredient
 {
-    private string _name;
-    private string _unit;
+    private string _name = "";
+    private string _unit = "";
     private int _quantity;
 
     public Ingredient(string name, string unit, int quantity)
