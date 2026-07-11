@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 public class GetCategories
 {
-    public static async Task Run(System.Net.Http.HttpClient client)
+    public static async Task Run(HttpClient client)
     {
         string url = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52771";
         var response = await client.GetAsync(url);
