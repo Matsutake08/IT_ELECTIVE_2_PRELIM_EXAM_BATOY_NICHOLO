@@ -1,51 +1,19 @@
 namespace IT_ELECTIVE_2_PRELIM_EXAM.Models;
 
-// EXERCISE 1: Encapsulation - Private Fields
-// The fields below are public. Your task:
-// - Make all fields PRIVATE
-// - Create public Properties with getters and setters
-// - The property names should match the field names (PascalCase)
-//
-// Currently, the properties below are STUBS that return wrong values.
-// Fix them to properly wrap the private fields.
-
 public class Meal
 {
-    public string name;
-    public string category;
-    public string area;
-    public string instructions;
-    public string thumbnail;
-    public string tags;
+    private string _name = string.Empty;
+    private double _price;
 
-    // EXERCISE 1: Fix these stub properties to properly get/set from private fields
-    // After fixing, make the fields above PRIVATE
-    public string Name { get => ""; set { } }
-    public string Category { get => ""; set { } }
-    public string Area { get => ""; set { } }
-
-    public Meal()
+    public string Name
     {
-        name = "";
-        category = "";
-        area = "";
-        instructions = "";
-        thumbnail = "";
-        tags = "";
+        get => _name;
+        set => _name = value;
     }
 
-    public Meal(string name, string category, string area)
+    public double Price
     {
-        this.name = name;
-        this.category = category;
-        this.area = area;
-        this.instructions = "";
-        this.thumbnail = "";
-        this.tags = "";
-    }
-
-    public override string ToString()
-    {
-        return $"Meal: {Name} | Category: {Category} | Area: {Area}";
+        get => _price;
+        set => _price = value;
     }
 }
