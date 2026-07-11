@@ -21,9 +21,9 @@ namespace IT_ELECTIVE_2_PRELIM_EXAM_HttpClient.Exercises;
 //   ]
 // }
 
-public static class DeserializeMeals
+public class DeserializeMeals
 {
-    public static async Task Run(System.Net.Http.HttpClient client)
+    public static async Task Run(HttpClient client)
     {
         // TODO: Send GET request to https://themealdb.com/api/json/v1/1/search.php?f=a
         // TODO: Assert status code is 200 OK
